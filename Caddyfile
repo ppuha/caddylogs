@@ -1,0 +1,8 @@
+:6167 {
+	file_server
+
+	log {
+		output file log/access.log
+		format json
+	}
+}
