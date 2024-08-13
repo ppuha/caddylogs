@@ -26,6 +26,6 @@ export const Paging = ({ page, setPage, pageCount }) => {
     { className: "pagination" },
     (page > 10 ? [getPage(0)] : [])
       .concat(getRange().map(getPage))
-      .concat(page < 10 ? [getPage(pageCount)] : []),
+      .concat(page < pageCount - 10 ? [getPage(pageCount)] : []),
   );
 };
