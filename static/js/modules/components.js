@@ -1,5 +1,5 @@
 import { Paging } from "./paging.js";
-import { getComparator } from "./utils.js";
+import { getComparator, unquote } from "./utils.js";
 
 export const e = React.createElement;
 
@@ -20,7 +20,7 @@ export const Header = ({ name, onClick }) =>
   ]);
 
 export const Cell = ({ data, getValue }) =>
-  e("td", {}, JSON.stringify(getValue(data)));
+  e("td", {}, unquote(getValue(data)));
 
 export const Row = ({ data, getValues }) =>
   e("tr", {}, [

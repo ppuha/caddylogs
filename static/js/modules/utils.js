@@ -18,3 +18,5 @@ export const getComparator = ({ getValue, reverse }) => {
 
 export const range = (start, end) =>
   [...Array(end - start).keys()].map((i) => i + start);
+
+export const unquote = (value) => JSON.parse(JSON.stringify(value));
